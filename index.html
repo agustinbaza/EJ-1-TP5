@@ -37,16 +37,38 @@
         <hr />
         <h4 class="contenedores">Reglas de juego:</h4>
         <p class="espacio">
-          <b>1-</b> Ingrese un número que considere ganador.
+          <b>1-</b> Presione el boton comenzar el juego para generar un número
+          aleatorio.
         </p>
         <p class="espacio">
-          <b>2-</b> Si no ganó, ingrese otro número siguiendo las pistas.
+          <b>2-</b> Ingrese un número que este en el rango del 1 al 100.
         </p>
         <p class="espacio">
-          <b>3-</b> Repita los pasos hasta llegar al número ganador.
+          <b>3-</b> Si no ganó, ingrese otro número siguiendo las pistas.
         </p>
-        <button class="btn btn-dark contenedores">Comenzar el juego</button>
+        <button class="btn btn-dark contenedores" onclick="generarRandom()">
+          Comenzar el juego
+        </button>
       </div>
+
+      <div class="contenedores text-center">
+        <h4 class="mt-5">INGRESE EL NÚMERO</h4>
+        <hr />
+        <input
+          type="number"
+          class="form-control espacioInput mt-5"
+          placeholder="Ingrese el número"
+          id="input"
+        />
+        <button class="btn btn-dark mt-3 contenedores" id="boton">
+          Enviar
+        </button>
+      </div>
+
+      <div id="mensajeGanador"></div>
+      <div id="mensajeMenor"></div>
+      <div id="mensajeMayor"></div>
+      <div id="mensajeError"></div>
     </main>
 
     <footer class="text-center">&copy; Creado por Agustin Baza</footer>
