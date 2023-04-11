@@ -30,16 +30,16 @@ function ganador() {
     let mensaje1 = document.getElementById("mensajeMenor");
     mensaje1.innerHTML = `
             <div class="alert alert-secondary text-center" role="alert">
-            <h4 class="alert-heading">ESTUVO CERCA!!</h4>
-            <p> No ganaste, pero te doy una pista: El número ganador es menor a ${valorInput}. </p>
+            <h4 class="alert-heading"> ESTA VEZ NO GANASTE :(</h4>
+            <p> Pero te doy una pista: El número ganador es <b> menor </b> a ${valorInput}. </p>
             <p> Este fue tu intento n°${intentos++} </p>
             </div>`;
   } else if (valorInput < random) {
     let mensaje1 = document.getElementById("mensajeMayor");
     mensaje1.innerHTML = `
             <div class="alert alert-warning text-center" role="alert">
-            <h4 class="alert-heading">ESTUVO CERCA!!</h4>
-            <p> No ganaste, pero te doy una pista: El número ganador es mayor a ${valorInput} </p>
+            <h4 class="alert-heading"> ESTA VEZ NO GANASTE :(</h4>
+            <p> Pero te doy una pista: El número ganador es <b> mayor </b> a ${valorInput} </p>
             <p> Este fue tu intento n°${intentos++} </p>
             </div>`;
   } else {
@@ -53,3 +53,13 @@ function ganador() {
 }
 
 botonEnviar.addEventListener("click", ganador);
+
+function mostrarMensaje() {
+  let section = document.getElementById("mensaje");
+  console.log(section);
+
+  let parrafoNuevo = document.createElement("h5");
+  parrafoNuevo.innerText = `NÚMERO GENERADO`;
+  parrafoNuevo.className = "text-danger text-center";
+  section.appendChild(parrafoNuevo);
+}

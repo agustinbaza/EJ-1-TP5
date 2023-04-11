@@ -46,9 +46,13 @@
         <p class="espacio">
           <b>3-</b> Si no ganó, ingrese otro número siguiendo las pistas.
         </p>
-        <button class="btn btn-dark contenedores" onclick="generarRandom()">
+        <button
+          class="btn btn-dark contenedores"
+          onclick="generarRandom(), mostrarMensaje()"
+        >
           Comenzar el juego
         </button>
+        <div id="mensaje"></div>
       </div>
 
       <div class="contenedores text-center">
